@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme's Portfolio</title>
+    <link rel="icon" type="image/png" href="./assets/pixeled-profile.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="center-body">
+        <header class="center-flex">
+            <span id="header-area">
+                <section>
+                    <span class="title">Olá</span>, meu nome é <span style="font-size: 18px;font-weight: bold;">Guilherme de Jesus Araujo Medeiros</span> e eu sou um analista e desenvolvedor de sistemas.
+                    Eu trabalho na área fazem 2 anos, mas eu ja obtive bastante experiência na área através de estágio por 3 anos.<br/>
+                    Meu maior foco de estudo é em full-stack, aprendendo tudo sobre o front-end e também pegando conhecimentos sobre APIs e SQL para o back-end.<br/>
+                    Aqui estão algumas linguagens, bancos de dados e afins que eu já trabalhei:
+                </section>
+                <div class="profile-picture-area">
+                    <img
+                        src="./assets/profile.jpg"
+                        alt="foto de perfil do Guilherme"
+                        title="Guilherme Medeiros"
+                        class="profile-picture"
+                    />
+                </div>
+            </span>
+        </header>
+        <span class="separator"></span>
+        <section class="center-flex">
+            <span class="center-grid">
+                <div id="html" class="accordion" onclick="changeAccordionState('html')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/html_logo.png"
+                            alt="HTML5"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">HTML5</p>
+                        <p>
+                            Eu estudei e estudo HTML até hoje, desde o momento que eu comecei meu primeiro estágio.
+                            Atualmente eu uso ela no meu dia a dia, mas através de ReactJS, NextJS e outros frameworks w bibliotecas.
+                        </p>
+                    </div>
+                </div>
+                <div id="css" class="accordion" onclick="changeAccordionState('css')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/css_logo.png"
+                            alt="CSS3"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">CSS3</p>
+                        <p>
+                            CSS é algo que eu gosto muito de trabalhar, junto com HTML, eu mexo com CSS desde o meu primeiro estágio,
+                            ultimamente eu ando trabalhando muito com TailwindCSS e também tenho conhecimento de Styled Components.
+                        </p>
+                    </div>
+                </div>
+                <div id="javascript" class="accordion" onclick="changeAccordionState('javascript')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/javascript_logo.png"
+                            alt="JavaScript"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">JavaScript</p>
+                        <p>
+                            Assim como HTML e CSS, eu trabalho com JavaScript desde meu primeiro estágio. Eu tenho bastante conhecimento
+                            de seu funcionamento e como usar as funções, mas tenho mais familiaridade através de ReactJS e NextsJS.
+                        </p>
+                    </div>
+                </div>
+                <div id="typescript" class="accordion" onclick="changeAccordionState('typescript')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/typescript_logo.png"
+                            alt="TypeScript"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">TypeScript</p>
+                        <p>
+                            TypeScript é uma linguagem que eu comecei a aprender depois das outras. Atualmente eu faço alguns projetos
+                            usando TypeScript para melhorar minha familiaridade com a língua. Eu já mexo cm TypeScript a 2 anos.
+                        </p>
+                    </div>
+                </div>
+                <div id="nextjs" class="accordion" onclick="changeAccordionState('nextjs')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/nextjs_logo.png"
+                            alt="NextJS"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">NextJS</p>
+                        <p>
+                            NextJS é um framework que eu estou bem acostumado a usar, considerando que eu venho trabalhado com ele por todos esses anos.
+                            De início eu comecei com o ReactJS, mas depois de estudar mais sobre e ver que o NextJS facilitava bastante
+                            a paginação, rotas e demais, eu passei a utiliza-lo como framework de trabalho padrão.
+                        </p>
+                    </div>
+                </div>
+                <div id="nodejs" class="accordion" onclick="changeAccordionState('nodejs')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/nodejs_logo.png"
+                            alt="NodeJS"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">NodeJS</p>
+                        <p>
+                            Para o back-end, eu faço bastante uso do NodeJS. Por conta de seu uso do JavaScript,
+                            foi bem facil para mim começar a usa-lo. Eu ainda não domino todas as suas utilidades, mas
+                            posso dizer que tenho o conhecimento necessário para montar uma API utilizand-o como base.
+                        </p>
+                    </div>
+                </div>
+                <div id="postgresql" class="accordion" onclick="changeAccordionState('postgresql')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/postgresql_logo.png"
+                            alt="PostgreSQL"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">PostgreSQL</p>
+                        <p>
+                            PostgreSQL é o banco de dados que eu estou mais acostumado de trabalhar, já mexi em 5 projetos utilizando-o
+                            e em todas as vezes foi muit excepcional, é uma banco muito prático e completo. Ele é o meu banco de preferência
+                            ao iniciar um projeto (levando em consideração o que é preciso).
+                        </p>
+                    </div>
+                </div>
+                <div id="mysql" class="accordion" onclick="changeAccordionState('mysql')">
+                    <div style="padding: 10px;">
+                        <img
+                            src="./assets/mariadb_mysql_logo.png"
+                            alt="MySQL"
+                            class="language-img"
+                        />
+                        <p class="title" style="font-size: 18px;">MySQL e MariaDB</p>
+                        <p>
+                            MySQL e MariaDB são bancos que eu já tive um contato, mas nãoo tanto quanto PostgreSQL. Eu trabalhei em
+                            um dois projetos, cada um usando um dos bancos, e eles são bastante rápidos e funcionais.
+                        </p>
+                    </div>
+                </div>
+            </span>
+        </section>
+        <span class="separator"></span>
+        <section style="width: 100%; display: flex; flex-direction: column;gap: 10px;">
+            <h1 class="title" style="text-align: start;">Contato</h1>
+            <div class="contact-link" style="cursor: default;">
+                <img src="./assets/gmail_logo.png" class="icon-img" style="cursor: default;"/>
+                <p style="font-weight: bold;cursor: text;">gmemedeiros496@gmail.com</p>
+            </div>
+            <div class="contact-link">
+                <img src="./assets/linkedin_logo.png" class="icon-img"/>
+                <a href="https://www.linkedin.com/in/guilherme-medeiros-236918226/" target="_blank">https://www.linkedin.com/in/guilherme-medeiros-236918226/</a>
+            </div>
+            <div class="contact-link">
+                <img src="./assets/github_logo.jpg" class="icon-img"/>
+                <a href="https://www.linkedin.com/in/guilherme-medeiros-236918226/" target="_blank">https://www.linkedin.com/in/guilherme-medeiros-236918226/</a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        Este site foi feito usando apenas HTML, CSS e JavaScript.
+        <span class="separator mobile-only"></span>
+    </footer>
+</body>
+</html>
