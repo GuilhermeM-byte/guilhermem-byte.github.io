@@ -1,3 +1,45 @@
+function translatePage(lang) {
+    const pageLang = document.documentElement.lang;
+    
+    if (lang === 'pt') {
+        const ptElements = document.getElementsByClassName('translatable-pt');
+        const enElements = document.getElementsByClassName('translatable-en');
+
+        for (let i = 0; i < ptElements.length; i++) {
+            ptElements[i].style.display = 'block';
+        }
+        for (let i = 0; i < enElements.length; i++) {
+            enElements[i].style.display = 'none';
+        }
+
+        document.documentElement.lang = 'pt';
+    }
+    if (lang === 'en') {
+        const ptElements = document.getElementsByClassName('translatable-pt');
+        const enElements = document.getElementsByClassName('translatable-en');
+        
+        for (let i = 0; i < ptElements.length; i++) {
+            ptElements[i].style.display = 'none';
+        }
+        for (let i = 0; i < enElements.length; i++) {
+            enElements[i].style.display = 'block';
+        }
+
+        document.documentElement.lang = 'en';
+    }
+    
+    toggleDropdown(false);
+}
+
+function toggleDropdown(open) {
+    const dropdown = document.querySelector('.dropdown');
+    if (open === false) {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
+    }
+}
+
 function changeAccordionState(accordion) {
     if (document.getElementById(accordion).classList.contains('open')) {
         document.getElementById(accordion).classList.remove('open');

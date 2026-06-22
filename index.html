@@ -8,12 +8,25 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="translatePage(document.documentElement.lang)">
     <div id="center-body">
+        <div class="translate-area">
+            <div class="translate-img-text">
+                <div style="cursor: pointer;" class="translatable-pt" onclick="toggleDropdown()">🇧🇷</div>
+                <div style="cursor: pointer;" class="translatable-en" onclick="toggleDropdown()">🇺🇸</div>
+                <span style="cursor: pointer;" class="dropdown">
+                    <div class="options" onclick="translatePage('pt')">🇧🇷 PT-BR</div>
+                    <div class="options" onclick="translatePage('en')">🇺🇸 EN-US</div>
+                </span>
+            </div>
+        </div>
         <header class="center-flex">
             <span id="header-area">
-                <section>
-                    <span style="font-size: 50px;font-weight: bold;">Olá</span>, meu nome é <span style="font-size: 25px;font-weight: bold;">Guilherme de Jesus Araujo Medeiros</span>, o seu desenvolvedor full-stack.
+                <section class="translatable-pt">
+                    Olá, meu nome é <span style="font-weight: bold;">Guilherme de Jesus Araujo Medeiros</span>, o seu desenvolvedor full-stack.
+                </section>
+                <section class="translatable-en">
+                    Hello, my name is <span style="font-weight: bold;">Guilherme de Jesus Araujo Medeiros</span>, your full-stack developer.
                 </section>
                 <div class="profile-picture-area">
                     <img
@@ -29,15 +42,21 @@
         </header>
         <span class="separator"></span>
         <section style="width: 100%;text-align: left;">
-            <h1 class="title">Sobre mim</h1>
-            <p>
+            <h1 class="title translatable-pt">Sobre mim</h1>
+            <h1 class="title translatable-en">About me</h1>
+            <p class="translatable-pt">
                 Eu sou formado em análise e desenvolvimento de sistemas pela Estácio e trabalho na área fazem 2 anos, mas eu ja obtive bastante experiência na área através de estágio por 3 anos.<br/>
                 Meu maior foco de estudo é em full-stack, aprendendo tudo sobre o front-end e também pegando conhecimentos sobre APIs e SQL para o back-end.<br/>
+            </p>
+            <p class="translatable-en">
+                I have a degree in systems analysis and development from Estácio and have been working in the field for 2 years, but I have already gained a lot of experience in the area through an internship for 3 years.<br/>
+                My main focus of study is in full-stack, learning everything about front-end and also gaining knowledge about APIs and SQL for back-end.<br/>
             </p>
         </section>
         <span class="separator"></span>
         <section style="width: 100%">
-            <h1 class="title" style="margin-bottom: 10px;">Linguagens e afins</h1>
+            <h1 class="title translatable-pt" style="margin-bottom: 10px;">Linguagens e afins</h1>
+            <h1 class="title translatable-en" style="margin-bottom: 10px;">Languagens and similars</h1>
             <span class="center-grid">
                 <img
                     src="./assets/html_logo.png"
@@ -99,7 +118,7 @@
         </section>
         <span class="separator"></span>
         <section style="width: 100%; display: flex; flex-direction: column;gap: 10px;">
-            <h1 class="title" style="text-align: start;">Contato</h1>
+            <h1 class="title translatable-pt" style="text-align: start;">Contato</h1>
             <div class="contact-link" onclick="handleCopy()">
                 <img src="./assets/gmail_logo.png" class="icon-img"/>
                 <a href="mailto:gmemedeiros496@gmail.com" style="font-weight: bold;" rel="noopener">gmemedeiros496@gmail.com</a>
@@ -115,7 +134,8 @@
         </section>
     </div>
     <footer>
-        Este site foi feito usando apenas HTML, CSS e JavaScript.
+        <span class="translatable-pt">Este site foi feito usando apenas HTML, CSS e JavaScript</span>
+        <span class="translatable-en">This site was made using only HTML, CSS and JavaScript</span>
         <span class="separator mobile-only"></span>
     </footer>
     <div id="toast-area" style="position: fixed;top: 0;right: 0;left: 0;z-index: 1;width: 100%;display: flex;align-items: center;justify-content: center;">
