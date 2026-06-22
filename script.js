@@ -28,11 +28,18 @@ function translatePage(lang) {
         document.documentElement.lang = 'en';
     }
     
-    toggleDropdown(false);
+    toggleDropdown(false,false);
 }
 
-function toggleDropdown(open) {
+function toggleDropdown(toggle, open) {
     const dropdown = document.querySelector('.dropdown');
+    if (toggle) {
+        if (dropdown.style.display = 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+    } 
     if (open === false) {
         dropdown.style.display = 'none';
     } else {
