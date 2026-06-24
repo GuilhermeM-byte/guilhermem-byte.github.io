@@ -109,7 +109,7 @@ address, a {
 .center-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+    gap: 5px 15px;
 }
 
 .contact-link {
@@ -241,6 +241,10 @@ address, a {
     #center-body {
         width: 100%;
     }
+    .dropdown {
+        left: unset;
+        right: 0;
+    }
 }
 
 /* CELULAR */
@@ -255,6 +259,14 @@ address, a {
 
     #toast {
         width: 90%;
+    }
+
+    .center-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
     }
 
     footer {
