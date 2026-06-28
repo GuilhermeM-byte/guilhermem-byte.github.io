@@ -5,7 +5,6 @@
     font-weight: 500;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: all .2s linear;
-    color: #FCF5E5;
 }
 
 html {
@@ -20,13 +19,11 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px;
-
-    background-color: #12002b;
 }
 
 #center-body {
     height: 100%;
-    width: 800px;
+    width: 850px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,14 +62,12 @@ footer {
     width: 100%;
     margin: 10px -10px -10px -10px;
     padding: 10px;
-
-    background-color: rgba(0, 0, 0, 0.8);
 }
 footer > section {
     display: flex;
     flex-wrap: nowrap;
 }
-address, a {
+address, .link {
     font-weight: bold;
     text-decoration: none;
 }
@@ -106,6 +101,13 @@ address, a {
     gap: 10px;
 }
 
+#proglangs-area {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 250px;
+    transition: all .2s ease-in-out;
+}
 .center-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -157,13 +159,28 @@ address, a {
     transition: all .2s linear;
 }
 
-.translate-area {
+.top-area {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-content: flex-end;
+    gap: 10px;
     margin-bottom: 10px;
+}
+
+#sun-icon {
+    cursor: pointer;
     transition: all .2s linear;
+}
+button:hover > #sun-icon {
+    fill: #f0db4f;
+}
+#moon-icon {
+    cursor: pointer;
+    transition: all .2s linear;
+}
+button:hover > #moon-icon {
+    fill: #316095;
 }
 
 .translate-img-text {
@@ -180,24 +197,38 @@ address, a {
     display: none;
     top: 30px;
     left: 0;
-    width: 75px;
+    width: 90px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 20;
 }
 
+#warning-icon {
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+#warning {
+    position: absolute;
+    display: none;
+    word-wrap: break-word;
+    top: 90px;
+    left: 91px;
+    width: 150px;
+    padding: 5px;
+    color: black;
+    background-color: whitesmoke;
+    font-size: 15px;
+    z-index: 21;
+}
+
 .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 5px;
     font-size: 15px;    
 }
 .options:hover {
     background-color: rgba(255, 255, 255, 0.5);
-}
-
-.translatable-pt {
-    display: block;
-}
-.translatable-en {
-    display: none;
 }
 
 .icon-img {
@@ -209,27 +240,6 @@ address, a {
 .title {
     font-size: 30px;
     font-weight: bold;
-}
-
-.accordion {
-    position: relative;
-
-    width: 100%;
-    height: 209px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-
-    cursor: pointer;
-    overflow: hidden;
-    transition: all .2s linear;
-}
-.accordion:hover {
-    background-color: rgba(107, 0, 255, 0.5);
 }
 
 .mobile-only {
@@ -244,6 +254,11 @@ address, a {
     .dropdown {
         left: unset;
         right: 0;
+    }
+    #warning {
+        left: unset;
+        right: 0;
+        top: 120px;
     }
 }
 
