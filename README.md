@@ -1,3 +1,5 @@
 PT: Olá, esse é meu portfolio, criado por ninguém menos que eu mesmo! Aqui você consegue ter um vislumbre do que eu sou capaz de fazer usando apenas HTML, CSS e JavaScritp. Eu sou um coringa do desenvolvimento full-stack, capaz de usar diferentes linguagens de desenvolvimento e frameworks. Você pode acessa-lo por aqui: https://guilhermem-byte.github.io/
 
 EN: Hello, this is my portfolio, created by none other then me! Here you can get a glimpse of what I can do using only HTML, CSS and JavaScript. I am a jack of many trades as a full-stack developer, able to use many different programmers lenguage and frameworks. You can access it here: https://guilhermem-byte.github.io/
+
+ES: Hola, este es mi portafolio, ¡creado por mí mismo! Aquí puedes ver una muestra de lo que puedo hacer usando solo HTML, CSS y JavaScript. Soy un desarrollador full-stack versátil, capaz de usar muchos lenguajes de programación y frameworks diferentes. Puedes acceder a él aquí: https://guilhermem-byte.github.io/

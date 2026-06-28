@@ -7,16 +7,28 @@
     <link rel="icon" type="image/png" href="./assets/pixeled-profile.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="translation.js"></script>
+    <script src="theme.js"></script>
 </head>
-<body onload="translatePage(document.documentElement.lang)">
+<body onload="translatePage(document.documentElement.lang);changeHeightState();changeTheme();">
     <div id="center-body">
-        <div class="translate-area">
+        <div class="top-area">
+            <div>
+                <button id="sun-button" style="width: 20px; background-color: transparent; border: none; cursor: pointer;" onclick="changeTheme()">
+                    <svg id="sun-icon" fill="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" d="M12 17.5a5.5 5.5 0 100-11 5.5 5.5 0 000 11zm0 1.5a7 7 0 100-14 7 7 0 000 14zm12-7a.75.75 0 01-.75.75h-2.5a.75.75 0 010-1.5h2.5A.75.75 0 0124 12zM4 12a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h2.5A.75.75 0 014 12zm16.485-8.485a.75.75 0 010 1.06l-1.768 1.768a.75.75 0 01-1.06-1.06l1.767-1.768a.75.75 0 011.061 0zM6.343 17.657a.75.75 0 010 1.06l-1.768 1.768a.75.75 0 11-1.06-1.06l1.767-1.768a.75.75 0 011.061 0zM12 0a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0V.75A.75.75 0 0112 0zm0 20a.75.75 0 01.75.75v2.5a.75.75 0 01-1.5 0v-2.5A.75.75 0 0112 20zM3.515 3.515a.75.75 0 011.06 0l1.768 1.768a.75.75 0 11-1.06 1.06L3.515 4.575a.75.75 0 010-1.06zm14.142 14.142a.75.75 0 011.06 0l1.768 1.768a.75.75 0 01-1.06 1.06l-1.768-1.767a.75.75 0 010-1.061z"></path></g></svg>
+                </button>
+                <button id="moon-button" style="width: 20px; background-color: transparent; border: none; cursor: pointer;" onclick="changeTheme()">
+                    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="#000000" class="bi bi-moon" viewBox="0 0 16 16"><path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/></svg>
+                </button>
+            </div>
             <div class="translate-img-text">
                 <div id="flag" style="cursor: pointer;" onclick="toggleDropdown(true)"></div>
                 <span style="cursor: pointer;" class="dropdown">
                     <div class="options" onclick="translatePage('pt')">🇧🇷 PT-BR</div>
                     <div class="options" onclick="translatePage('en')">🇺🇸 EN-US</div>
+                    <div class="options" onclick="translatePage('es')">🇪🇸 ES-SP <span id="warning-icon" onmouseenter="toggleWarning()" onmouseleave="toggleWarning()">⚠️</span></div>
                 </span>
+                <span id="warning"></span>
             </div>
         </div>
         <header class="center-flex">
@@ -36,12 +48,15 @@
         </header>
         <span class="separator"></span>
         <section style="width: 100%;text-align: left;">
-            <h1 id="titleAboutme" class="title translatable-pt"></h1>
+            <h1 id="titleAboutme" class="title"></h1>
             <p id="aboutme"></p>
         </section>
         <span class="separator"></span>
-        <section style="width: 100%">
-            <h1 id="proglangs" class="title" style="margin-bottom: 10px;"></h1>
+        <section id="proglangs-area">
+            <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="changeHeightState()">
+                <h1 id="proglangs" class="title" style="margin-bottom: 10px;"></h1>
+                <div id="prolangs-icon" class="title"></div>
+            </div>
             <span class="center-grid">
                 <img
                     src="./assets/html_logo.png"
@@ -72,6 +87,14 @@
                     class="language-img"
                 />
                 <img
+                    src="./assets/react_logo.png"
+                    alt="React"
+                    title="React"
+                    aria-label="React"
+                    class="language-img"
+                    style="object-fit: cover;"
+                />
+                <img
                     src="./assets/nextjs_logo.png"
                     alt="NextJS"
                     title="NextJS"
@@ -99,6 +122,20 @@
                     aria-label="MySQL"
                     class="language-img"
                 />
+                <img
+                    src="./assets/express_logo.png"
+                    alt="Express"
+                    title="Express"
+                    aria-label="Express"
+                    class="language-img"
+                />
+                <img
+                    src="./assets/tailwindcss_logo.png"
+                    alt="TailwindCSS"
+                    title="TailwindCSS"
+                    aria-label="TailwindCSS"
+                    class="language-img"
+                />
             </span>
         </section>
         <span class="separator"></span>
@@ -107,22 +144,21 @@
             <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;gap: 20px;">
                 <div class="contact-link">
                     <img src="./assets/linkedin_logo.png" class="icon-img"/>
-                    <a href="https://www.linkedin.com/in/guilherme-medeiros-236918226/" target="_blank">LinkedIn/Guilherme Medeiros</a>
+                    <a href="https://www.linkedin.com/in/guilherme-medeiros-236918226/" class="link" target="_blank">LinkedIn/Guilherme Medeiros</a>
                 </div>
                 <div class="contact-link">
                     <img src="./assets/github_logo.jpg" class="icon-img"/>
-                    <a href="https://www.linkedin.com/in/guilherme-medeiros-236918226/" target="_blank">GitHub/Guilherme Medeiros</a>
+                    <a href="https://www.linkedin.com/in/guilherme-medeiros-236918226/" class="link" target="_blank">GitHub/Guilherme Medeiros</a>
                 </div>
                 <div class="contact-link" onclick="handleCopy()">
                     <img src="./assets/gmail_logo.png" class="icon-img"/>
-                    <a href="mailto:gmemedeiros496@gmail.com" style="font-weight: bold;word-break: break-all;" rel="noopener">gmemedeiros496@gmail.com</a>
+                    <span class="link" style="word-break: break-all;">gmemedeiros496@gmail.com</span>
                 </div>
             </div>
         </section>
     </div>
     <footer>
         <span id="footermsg"></span>
-        <span class="separator mobile-only"></span>
     </footer>
     <div id="toast-area" style="position: fixed;top: 0;right: 0;left: 0;z-index: 1;width: 100%;display: flex;align-items: center;justify-content: center;">
         <div id="toast">
