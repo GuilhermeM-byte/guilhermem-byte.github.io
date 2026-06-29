@@ -33,37 +33,46 @@ function translatePage(lang) {
     if (lang === 'pt') {
         document.getElementById('flag').innerText = brFlag;
         document.getElementById('warning').innerText = warningsPT;
+        document.getElementById('mobile-warning').innerText = warningsPT;
         document.getElementById('greetings').innerText = greetingsPT;
         document.getElementById('titleAboutme').innerText = titleAboutmePT;
         document.getElementById('aboutme').innerText = aboutmePT;
         document.getElementById('proglangs').innerText = proglangsPT;
         document.getElementById('contact').innerText = titlecontactPT;
         document.getElementById('footermsg').innerText = footermsgPT;
+        document.getElementById('warning-icon').style.display = 'none';
         
         document.documentElement.lang = 'pt';
     }
     if (lang === 'en') {
         document.getElementById('flag').innerText = usFlag;
         document.getElementById('warning').innerText = warningsEN;
+        document.getElementById('mobile-warning').innerText = warningsEN;
         document.getElementById('greetings').innerText = greetingsEN;
         document.getElementById('titleAboutme').innerText = titleAboutmeEN;
         document.getElementById('aboutme').innerText = aboutmeEN;
         document.getElementById('proglangs').innerText = proglangsEN;
         document.getElementById('contact').innerText = titlecontactEN;
         document.getElementById('footermsg').innerText = footermsgEN;
+        document.getElementById('warning-icon').style.display = 'none';
 
         document.documentElement.lang = 'en';
     }
     if (lang === 'es') {
         document.getElementById('flag').innerText = esFlag;
         document.getElementById('warning').innerText = warningsES;
+        document.getElementById('mobile-warning').innerText = warningsES;
         document.getElementById('greetings').innerText = greetingsES;
         document.getElementById('titleAboutme').innerText = titleAboutmeES;
         document.getElementById('aboutme').innerText = aboutmeES;
         document.getElementById('proglangs').innerText = proglangsES;
         document.getElementById('contact').innerText = titlecontactES;
         document.getElementById('footermsg').innerText = footermsgES;
-        
+
+        if (window.innerWidth < 769) {
+            document.getElementById('warning-icon').style.display = 'block';
+        }
+
         document.documentElement.lang = 'es';
     }
     

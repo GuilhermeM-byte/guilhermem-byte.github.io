@@ -26,9 +26,13 @@
                 <span style="cursor: pointer;" class="dropdown">
                     <div class="options" onclick="translatePage('pt')">🇧🇷 PT-BR</div>
                     <div class="options" onclick="translatePage('en')">🇺🇸 EN-US</div>
-                    <div class="options" onclick="translatePage('es')">🇪🇸 ES-SP <span id="warning-icon" onmouseenter="toggleWarning()" onmouseleave="toggleWarning()">⚠️</span></div>
+                    <div class="options" onclick="translatePage('es')">🇪🇸 ES-SP <span id="dropdown-warning-icon" onmouseenter="toggleWarning(true)" onmouseleave="toggleWarning(true)">⚠️</span></div>
                 </span>
                 <span id="warning"></span>
+            </div>
+            <div style="position: relative; display: flex; align-items: start;">
+                <span id="warning-icon" onclick="toggleWarning(false)">⚠️</span>
+                <span id="mobile-warning"></span>
             </div>
         </div>
         <header class="center-flex">
@@ -148,7 +152,7 @@
                 </div>
                 <div class="contact-link">
                     <img src="./assets/github_logo.jpg" class="icon-img"/>
-                    <a href="https://www.linkedin.com/in/guilherme-medeiros-236918226/" class="link" target="_blank">GitHub/Guilherme Medeiros</a>
+                    <a href="https://github.com/GuilhermeM-byte" class="link" target="_blank">GitHub/Guilherme Medeiros</a>
                 </div>
                 <div class="contact-link" onclick="handleCopy()">
                     <img src="./assets/gmail_logo.png" class="icon-img"/>

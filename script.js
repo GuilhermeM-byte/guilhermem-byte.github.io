@@ -30,13 +30,23 @@ function toggleDropdown(toggle, open) {
     }
 }
 
-function toggleWarning() {
-    if (document.getElementById("warning").classList.contains("show")) {
-        document.getElementById("warning").classList.remove("show");
-        document.getElementById("warning").style.display = "none";
+function toggleWarning(desktop) {
+    if (desktop) {
+        if (document.getElementById("warning").classList.contains("show")) {
+            document.getElementById("warning").classList.remove("show");
+            document.getElementById("warning").style.display = "none";
+        } else {
+            document.getElementById("warning").classList.add("show");
+            document.getElementById("warning").style.display = "block";
+        }
     } else {
-        document.getElementById("warning").classList.add("show");
-        document.getElementById("warning").style.display = "block";
+        if (document.getElementById("mobile-warning").classList.contains("show")) {
+            document.getElementById("mobile-warning").classList.remove("show");
+            document.getElementById("mobile-warning").style.display = "none";
+        } else {
+            document.getElementById("mobile-warning").classList.add("show");
+            document.getElementById("mobile-warning").style.display = "block";
+        }
     }
 }
 
