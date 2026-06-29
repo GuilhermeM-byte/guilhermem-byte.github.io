@@ -124,8 +124,10 @@ address, .link {
     cursor: pointer;
 }
 .contact-link:hover {
-    opacity: 1;
     text-decoration: underline;
+}
+a, a:visited {
+    color: inherit;
 }
 
 .profile-picture-area {
@@ -203,6 +205,23 @@ button:hover > #moon-icon {
 }
 
 #warning-icon {
+    display: none;
+    font-size: 15px;
+}
+#mobile-warning {
+    position: absolute;
+    display: none;
+    word-wrap: break-word;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    padding: 5px;
+    color: black;
+    background-color: whitesmoke;
+    font-size: 15px;
+    z-index: 20;
+}
+#dropdown-warning-icon {
     margin-bottom: 2px;
     font-size: 12px;
 }
@@ -217,7 +236,7 @@ button:hover > #moon-icon {
     color: black;
     background-color: whitesmoke;
     font-size: 15px;
-    z-index: 21;
+    z-index: 20;
 }
 
 .options {
@@ -259,6 +278,12 @@ button:hover > #moon-icon {
         left: unset;
         right: 0;
         top: 120px;
+    }
+    #dropdown-warning-icon {
+        pointer-events: none;
+    }
+    #warning-icon {
+        cursor: pointer;
     }
 }
 
